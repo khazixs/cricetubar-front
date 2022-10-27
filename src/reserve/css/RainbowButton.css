@@ -1,0 +1,63 @@
+/* 清除内边距和外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+/* text-decoration 属性规定添加到文本的修饰，
+如：下划线、上划线、删除线等。 
+取值none为没有文本装饰*/
+#div1 {
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(-50%, -50%);
+    表示向左位移自身的50%宽，向上位移自身的50%高 */
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+#div1:hover {
+    animation: sun 8s infinite;
+}
+
+#div1:hover::before {
+    animation: sun 8s infinite;
+}
+
+#div1::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 50px;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+
+
+@keyframes sun {
+    100% {
+        background-position: -400% 0;
+    }
+}
