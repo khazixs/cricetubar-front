@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type="checkbox"]:default+label {
+            font-style: italic;
+        }
+
+        input:required {
+            border-color: pink;
+        }
+
+        input:optional {
+            border-color: green;
+        }
+
+        input[type="email"]:focus {
+            background-position: 100% 50%;
+            background-repeat: no-repeat;
+        }
+
+        input[type="email"]:focus:invalid {
+            background-image: url(warning.jpg);
+        }
+
+        input[type="email"]:focus:valid {
+            background-image: url(checkmark.jpg);
+        }
+
+        body>p {
+            background-color: aquamarine;
+            text-align: right;
+            width: 100px;
+            height: 150px;
+            writing-mode: vertical-rl;
+            /* writing-mode规定书写方式 */
+        }
+
+        #div1 {
+            width: 400px;
+            height: 300px;
+            left: 300px;
+            border-color: tan red green blue;
+            border-width: 20px;
+            border-radius: 20px;
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <input type="checkbox" id="chbx" checked name="foo" value="bar"><br /> -->
+    <input type="email" id="email" placeholder="请输入邮箱地址" required><br />
+    <input type="email" id="email" placeholder="请输入邮箱地址"><br />
+    <input type="email" id="email" placeholder="请输入邮箱地址" required="false"><br />
+    <input type="email">
+    <p>有朋自远方来，不亦说乎？士为知己者死，女为悦己者容。</p>
+    <!-- <label for="chbx">this was checked on page load</label> -->
+    <div id="div1">
+    </div>
+
+    <h1 style="background-color: green;">
+        <p style="margin: 10px;background-color: pink;">ABCDEFGHIJKLMNOPQ</p>
+    </h1>
+
+    <!-- <div id="div2" style="padding-bottom: 2000px;background-color:gray;border:1px">
+        <p>qwertyuiopsdfghjklzcxsuihdaiuhaioauioasdouiafoipfosdipdfsaiofadiopafdpio</p>
+        <p>qwertyuiopsdfghjklzcxsuihdaiuhaioauioasdouiafoipfosdipdfsaiofadiopafdpio</p>
+        <p>qwertyuiopsdfghjklzcxsuihdaiuhaioauioasdouiafoipfosdipdfsaiofadiopafdpio</p>
+        <p>qwertyuiopsdfghjklzcxsuihdaiuhaioauioasdouiafoipfosdipdfsaiofadiopafdpio</p>
+    </div> -->
+
+    <div id="div3"
+        style="background-color:aquamarine;border: 5px dotted;padding: 10px;width: 500px;height: 400px;position: relative;">
+        <div id="div3-1"
+            style="position: static;top: 100px;left:100px;background-color: yellow;width: 50px;height: 50px;"></div>
+        <div id="div3-2"
+            style="position: sticky;top: 100px;left:100px;background-color: gray;width: 50px;height: 50px;">
+        </div>
+</body>
+
+</html>
