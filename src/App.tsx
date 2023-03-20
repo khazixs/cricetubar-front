@@ -6,8 +6,10 @@ import LearnState from './learnTs/LearnState';
 import TodoList from './learnTs/TodoList';
 import LearnRefs from './learnTs/LearnRefs';
 import LearnEvent from './learnTs/LearnEvent';
+import App2 from './learnTs/LearnHooks';
 
 function App() {
+
   return (
     <div>
       <Orange name='时钟' />
@@ -16,6 +18,7 @@ function App() {
       <TodoList />
       <LearnRefs />
       <LearnEvent />
+      <App2 />
     </div>
   );
 }

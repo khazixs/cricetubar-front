@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practise axios</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <button id="bt1">get</button>
+    <button id="bt2">post</button>
+    <button id="bt3">delete</button>
+</body>
+<script>
+    let bts = document.querySelectorAll("button");
+    bts[0].onclick = function () {
+        axios.request({
+            method: "get",
+            url: "http://localhost:3000/posts/1"
+        }).then(resolve => {
+            console.log(resolve);
+        }, reject => {
+            console.log(reject);
+        });
+    }
+
+    bts[1].onclick = function () {
+        axios({
+            method: "post",
+            url: 'http://localhost:3000/posts',
+            data: {
+                title: "you see you",
+                author: "one day day"
+            }
+        })
+    }
+</script>
+
+</html>
